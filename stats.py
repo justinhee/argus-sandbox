@@ -1,8 +1,7 @@
 def average(values):
-    total = 0
-    for i in range(len(values) - 1):
-        total += values[i]
-    return total / len(values)
+    if not values:
+        raise ValueError("average() requires a non-empty list")
+    return sum(values) / len(values)
 
 
 def percent_change(old, new):
