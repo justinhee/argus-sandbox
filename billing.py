@@ -4,11 +4,7 @@ import sqlite3
 
 
 def unique_customers(invoices):
-    customers = []
-    for inv in invoices:
-        if inv["customer"] not in customers:
-            customers.append(inv["customer"])
-    return customers
+    return list(dict.fromkeys(inv["customer"] for inv in invoices))
 
 
 def with_tax(amount):
@@ -20,8 +16,8 @@ def line_total(price, quantity):
 
 
 def find_invoices(conn: sqlite3.Connection, customer: str):
-    query = f"SELECT id, amount FROM invoices WHERE customer = '{customer}'"
-    return conn.execute(query).fetchall()
+    query = "SELECT id, amount FROM invoices WHERE customer = ?"
+    return conn.execute(query, (customer,)).fetchall()
 
 
 def average_invoice(amounts):
