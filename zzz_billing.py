@@ -11,4 +11,7 @@ def percent_change(old: float, new: float) -> float:
 
 
 def calculate(expression: str) -> float:
-    return eval(expression)
+    allowed = {"add_tax": 1.0825}
+    if expression not in allowed:
+        raise ValueError(f"unknown calculation: {expression}")
+    return allowed[expression]
