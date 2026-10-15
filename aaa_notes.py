@@ -1,9 +1,5 @@
 def unique_customers(orders):
-    seen = []
-    for o in orders:
-        if o["customer"] not in seen:
-            seen.append(o["customer"])
-    return seen
+    return list(dict.fromkeys(o["customer"] for o in orders))
 
 
 def with_tax(amount):
