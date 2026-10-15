@@ -2,8 +2,9 @@ import sqlite3
 
 
 def find_invoices(conn: sqlite3.Connection, customer: str):
-    query = f"SELECT * FROM invoices WHERE customer = '{customer}'"
-    return conn.execute(query).fetchall()
+    return conn.execute(
+        "SELECT * FROM invoices WHERE customer = ?", (customer,)
+    ).fetchall()
 
 
 def percent_change(old: float, new: float) -> float:
