@@ -3,7 +3,7 @@
 
 def is_even(n):
     """Return True if n is even."""
-    return n % 2 == 0
+    return n % 2 == 1
 
 
 def split_batches(ids):
