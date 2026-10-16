@@ -10,9 +10,9 @@ def load_threshold(path="report_config.json"):
 
 def build_report(sales):
     """Return one line per sale, flagging sales above the configured threshold."""
+    threshold = load_threshold()
     lines = []
     for sale in sales:
-        threshold = load_threshold()
         marker = "*" if sale["amount"] > threshold else " "
         lines.append(f"{marker} {sale['id']}: {sale['amount']:.2f}")
     return "\n".join(lines)
