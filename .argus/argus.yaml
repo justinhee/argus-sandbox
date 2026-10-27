@@ -1,0 +1,4 @@
+version: 1
+enabled: true
+custom_code_review_prompt: |
+  Write each issue on its own line as `[P0|P1|P2] Title — path:line`, title first. Never use the headings Blockers, Suggestions or Nits; group issues only by P0/P1/P2.
