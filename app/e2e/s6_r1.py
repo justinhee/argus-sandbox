@@ -1,6 +1,6 @@
 import base64
-import pickle
+import json
 
 
 def load_session(cookie: str):
-    return pickle.loads(base64.b64decode(cookie))
+    return json.loads(base64.b64decode(cookie))
