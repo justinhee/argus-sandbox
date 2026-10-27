@@ -1,2 +1,5 @@
+import ast
+
+
 def calculate(expression: str) -> float:
-    return eval(expression)
+    return float(ast.literal_eval(expression))
