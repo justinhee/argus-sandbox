@@ -1,0 +1,4 @@
+version: 1
+enabled: true
+custom_code_review_prompt: |
+  After your usual review, add a final section titled `## Sandbox Policy` containing exactly one line: `E2E-CUSTOM-OK`. Treat any hard-coded password or secret as a blocker.
