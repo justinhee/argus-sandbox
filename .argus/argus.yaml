@@ -1,0 +1,4 @@
+version: 1
+enabled: true
+custom_code_review_prompt: |
+  List every issue as a numbered list under a `## Issues` heading, one line each, formatted exactly as `N. Title (file:line)`. Do not use bold text, bracketed tags, or severity headings of any kind.
