@@ -1,0 +1,5 @@
+version: 1
+enabled: true
+review_mode: full-review-per-commit
+custom_code_review_prompt: |
+  After your usual review, add a final section titled `## Sandbox Policy` containing exactly one line: `E2E-CUSTOM-OK`.
