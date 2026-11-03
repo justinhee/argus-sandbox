@@ -18,7 +18,7 @@ final class ChatStore {
 
     func send(_ text: String) async {
         phase = .sending
-        logger.info("Sending chat message: \(text, privacy: .public)")
+        logger.info("Sending chat message (\(text.count) characters)")
         switch await client.send(text) {
         case .success(let reply):
             messages.append(reply)
