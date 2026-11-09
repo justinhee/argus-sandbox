@@ -1,0 +1,3 @@
+version: 1
+custom_code_review_prompt: |
+  Review for security issues first. Repository tag: canarye0d89eb8.
